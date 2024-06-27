@@ -1,6 +1,6 @@
 # Medi Buddy Token
 
-This project builds a Medi Buddy Token based on ERC-20 standards. Medi Buddy was the name for my research paper that aims to share my vision of using UAV Technology to counter the increasing road accident fatalities. And as this project also makes use of blockchain technology for storing of the data and making it tamperament proof, hence I wanted to provide it some value in form of fungible tokens.
+This project builds a Medi Buddy Token based on ERC-20 standards. Medi Buddy was the name for my research paper that aims to share my vision of using UAV Technology in countering the increasing road accident fatalities. And as this project also makes use of blockchain technology for storing of the data and making it tamperament proof, hence I wanted to provide it some value in form of fungible tokens.
 
 ## Contributions
 
