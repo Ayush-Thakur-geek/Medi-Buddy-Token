@@ -5,7 +5,7 @@ contract MyToken {
     address public owner;
     string public name = "Medi Buddy Token";
     string public symbol = "MBT";
-    uint8 public decimals = 18;
+    uint8 public decimals = 0;
     uint256 public totalSupply;
 
     mapping(address => uint256) private balance;
@@ -67,8 +67,8 @@ contract MyToken {
         uint256 _value
     ) public returns (bool success) {
         require(_from != address(0) && _to != address(0), "Invalid address");
-        require(balance[_from] >= _value, "Not enough balance");
         require(allowed[_from][msg.sender] >= _value, "Not enough allowance");
+        require(balance[_from] >= _value, "Not enough balance");
 
         balance[_from] -= _value;
         balance[_to] += _value;
@@ -81,13 +81,13 @@ contract MyToken {
         require(_to != address(0), "Invalid address");
         balance[_to] += _value;
         totalSupply += _value;
-        emit Transfer(address(0), _to, _value); // Minting is essentially a transfer from zero address
+        emit Transfer(address(0), _to, _value);
     }
 
     function burn(uint256 _value) public {
         require(balance[msg.sender] >= _value, "Not enough balance");
         balance[msg.sender] -= _value;
         totalSupply -= _value;
-        emit Transfer(msg.sender, address(0), _value); // Burning is essentially a transfer to zero address
+        emit Transfer(msg.sender, address(0), _value);
     }
 }
