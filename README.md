@@ -39,3 +39,23 @@ npm install --save-dev hardhat
 ```
 
 Congrats! you have all necessary condition for this project and for further info go to official hardhat docs: https://hardhat.org/docs
+
+## Smart Contract
+
+### Contract Details
+
+- **Name:** Medi Buddy Token
+- **Symbol:** MBT
+- **Decimals:** 0
+- **Total Supply:** Variable (set upon deployment and can be increased by the owner)
+
+### Functions
+
+- `balanceOf(address _owner) public view returns (uint256)`
+- `allowance(address _owner, address _spender) public view returns (uint256)`
+- `approve(address _spender, uint256 _value) public returns (bool)`
+- `transfer(address _to, uint256 _value) public returns (bool)`
+- `transferFrom(address _from, address _to, uint256 _value) public returns (bool)`
+- `mint(address _to, uint256 _value) public onlyOwner`
+- `burn(uint256 _value) public`
+
